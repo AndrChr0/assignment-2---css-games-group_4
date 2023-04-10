@@ -1,0 +1,126 @@
+* {
+  cursor: crosshair;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+h1,
+h2 {
+  color: aliceblue;
+}
+
+h2 {
+  font-size: xx-large;
+}
+
+p {
+  font-size: x-large;
+  color: whitesmoke;
+}
+
+body {
+  overflow: hidden;
+}
+
+.stage__one--body {
+  background: linear-gradient(0deg, rgb(2, 0, 36) 0%, rgb(0, 152, 194) 100%);
+  background-attachment: fixed;
+}
+
+.ball-container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  position: relative;
+  bottom: 100px;
+  z-index: 3;
+}
+
+.ball-one {
+  animation-delay: 8s;
+}
+
+.ball-two {
+  animation-delay: 8.5s;
+}
+
+.ball-three {
+  animation-delay: 9s;
+}
+
+.ball-four {
+  animation-delay: 9.5s;
+}
+
+.ball-five {
+  animation-delay: 10s;
+}
+
+.ball-six {
+  animation-delay: 10.5s;
+}
+
+.ball-seven {
+  animation-delay: 11s;
+}
+
+.ball-eight {
+  animation-delay: 11.5s;
+}
+
+.ball-nine {
+  animation-delay: 12s;
+}
+
+.ball-ten {
+  animation-delay: 12.5s;
+}
+
+.ball-eleven {
+  animation-delay: 13s;
+}
+
+.game__info--container {
+  height: 100%;
+  width: 100dvw;
+  background-color: rgb(15, 12, 32);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: info-box 1s linear 5s 1 normal both;
+  position: absolute;
+}
+
+input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  content: url(https://www.pngall.com/wp-content/uploads/5/Red-Ball-Transparent.png);
+  height: 60px;
+  width: 70px;
+  animation: fall 5s linear;
+  animation-delay: 7s;
+}
+
+input:checked {
+  opacity: 0;
+}
+
+@keyframes info-box {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(5000px);
+  }
+}
+@keyframes fall {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(1000px);
+  }
+}/*# sourceMappingURL=index.css.map */

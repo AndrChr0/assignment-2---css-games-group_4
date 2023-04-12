@@ -130,6 +130,12 @@ input:checked {
   align-items: center;
   justify-content: center;
   position: absolute;
+  top: -100dvh;
+  transition: 200ms;
+}
+
+input:checked + input:checked + input:checked + input:checked + input:checked + input:checked + input:checked + input:checked + input:checked + input:checked + input:checked ~ .game__info--win-screen {
+  top: 9.7dvh;
 }
 
 .game__info--next-stage {

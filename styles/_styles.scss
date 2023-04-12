@@ -23,13 +23,7 @@ body {
 }
 
 .stage__one--body {
-  // background: linear-gradient(
-  //   0deg,
-  //   rgba(2, 0, 36, 1) 0%,
-  //   rgba(0, 152, 194, 1) 100%
-  // );
   background: var(--stage-one-body-linear-gradient) fixed;
-  // background-attachment: fixed;
 }
 
 .ball-container {

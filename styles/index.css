@@ -121,6 +121,39 @@ input:checked {
   margin-top: 500px;
 }
 
+.game__info--win-screen {
+  height: 115dvh;
+  width: 100dvw;
+  background-color: rgb(15, 12, 32);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+}
+
+.game__info--next-stage {
+  height: 50px;
+  width: 180px;
+  background-color: rgb(255, 255, 255);
+  font-size: 20px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.game__info--next-stage a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.game__info--next-stage:hover {
+  background-color: red;
+}
+
 @keyframes info-box {
   0% {
     opacity: 1;

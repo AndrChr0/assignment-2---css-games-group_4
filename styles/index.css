@@ -100,6 +100,7 @@ input {
   width: 70px;
   animation: fall 5s linear;
   animation-delay: 7s;
+  animation-iteration-count: infinite;
 }
 
 input:checked {
@@ -107,6 +108,10 @@ input:checked {
 }
 
 .game__info--game-over {
+  display: none;
+}
+
+#start-game:checked ~ .game__info--game-over {
   height: 100vh;
   width: 100vw;
   background-color: rgb(15, 12, 32);
@@ -121,6 +126,7 @@ input:checked {
   margin-top: 500px;
 }
 
+<<<<<<< HEAD
 .game__info--win-screen {
   height: 115dvh;
   width: 100dvw;
@@ -158,6 +164,34 @@ input:checked + input:checked + input:checked + input:checked + input:checked + 
 
 .game__info--next-stage:hover {
   background-color: red;
+=======
+#start-game {
+  display: none;
+}
+
+#start-game:checked ~ #start-game-button {
+  display: none;
+}
+
+#start-game-button {
+  color: red;
+  z-index: 11;
+  position: absolute;
+  border: red 2px solid;
+}
+
+.game__info--start-game {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: 10;
+  top: 0;
+}
+
+#start-game:checked ~ .game__info--start-game {
+  display: none;
+>>>>>>> origin/Startscreen
 }
 
 @keyframes info-box {

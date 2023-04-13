@@ -14,7 +14,7 @@ The project helps us develop our coding skills while also using Git/GitHub.
 
 To get started, users can follow these steps:
 
-1. Cole the repository to their local environment using git clone https://github.com/AdvancedCSS2023/assignment-2---css-games-group_4.git
+1. Clone the repository to their local environment using git clone https://github.com/AdvancedCSS2023/assignment-2---css-games-group_4.git
 
 2. Open the index.html file in their browser.
 

@@ -382,6 +382,7 @@ input.stage-two {
 
 .stage__three--body {
   background: var(--stage-three-body-linear-gradient) fixed;
+  top: 0;
 }
 
 .game__info--game-over-stage-three {
@@ -399,52 +400,48 @@ input.stage-two {
   margin-top: 500px;
 }
 
-.ball-one.stage-three {
+.ball-container .ball-one.stage-three {
   animation-delay: 8s;
 }
-
-.ball-two.stage-three {
+.ball-container .ball-two.stage-three {
   animation-delay: 8.5s;
 }
-
-.ball-three.stage-three {
+.ball-container .ball-three.stage-three {
   animation-delay: 9s;
 }
-
-.ball-four.stage-three {
+.ball-container .ball-four.stage-three {
   animation-delay: 9.5s;
 }
-
-.ball-five.stage-three {
+.ball-container .ball-five.stage-three {
   animation-delay: 10s;
 }
-
-.ball-six.stage-three {
+.ball-container .ball-six.stage-three {
   animation-delay: 10.5s;
 }
-
-.ball-seven.stage-three {
+.ball-container .ball-seven.stage-three {
   animation-delay: 11s;
 }
-
-.ball-eight.stage-three {
+.ball-container .ball-eight.stage-three {
   animation-delay: 11.5s;
 }
-
-.ball-nine.stage-three {
+.ball-container .ball-nine.stage-three {
   animation-delay: 12s;
 }
-
-.ball-ten.stage-three {
+.ball-container .ball-ten.stage-three {
   animation-delay: 12.5s;
 }
-
-.ball-eleven.stage-three {
+.ball-container .ball-eleven.stage-three {
   animation-delay: 13s;
 }
 
-input.stage-three {
+input.stage-three:nth-child(odd) {
   animation: fall-side-to-side 5s reverse;
+  animation-delay: 7s;
+  animation-iteration-count: infinite;
+}
+
+input.stage-three:nth-child(even) {
+  animation: fall-side-to-side 5s linear;
   animation-delay: 7s;
   animation-iteration-count: infinite;
 }

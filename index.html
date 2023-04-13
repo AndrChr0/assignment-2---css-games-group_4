@@ -1,42 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CSS - Game</title>
-    <link rel="stylesheet" href="./styles/index.css" />
-  </head>
-  <body class="stage__one--body">
-    <div class="game__info--container">
-      <h1>POP ALL THE BALL'S BEFORE THE TIME RUNS OUT</h1>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS - Game</title>
+  <link rel="stylesheet" href="./styles/index.css" />
+</head>
+
+<body class="stage__one--body">
+  <div class="ball-container">
+    <input type="checkbox" class="ball-one stage-one" />
+    <input type="checkbox" class="ball-eleven stage-one" />
+    <input type="checkbox" class="ball-six stage-one" />
+    <input type="checkbox" class="ball-seven stage-one" />
+    <input type="checkbox" class="ball-three stage-one" />
+    <input type="checkbox" class="ball-five stage-one" />
+    <input type="checkbox" class="ball-eight stage-one" />
+    <input type="checkbox" class="ball-two stage-one" />
+    <input type="checkbox" class="ball-nine stage-one" />
+    <input type="checkbox" class="ball-ten stage-one" />
+    <input type="checkbox" class="ball-four stage-one" />
+    <div class="game__info--win-screen">
+      <h2>YOU WON</h2>
+      <p>...nice</p>
+      <div class="game__info--next-stage">
+        <a href="./stage-two.html">STAGE TWO!</a>
+      </div>
     </div>
-    <div class="ball-container">
-      <input type="checkbox" class="ball-one stage-one" />
-      <input type="checkbox" class="ball-eleven stage-one" />
-      <input type="checkbox" class="ball-six stage-one" />
-      <input type="checkbox" class="ball-seven stage-one" />
-      <input type="checkbox" class="ball-three stage-one" />
-      <input type="checkbox" class="ball-five stage-one" />
-      <input type="checkbox" class="ball-eight stage-one" />
-      <input type="checkbox" class="ball-two stage-one" />
-      <input type="checkbox" class="ball-nine stage-one" />
-      <input type="checkbox" class="ball-ten stage-one" />
-      <input type="checkbox" class="ball-four stage-one" />
-      <div class="game__info--win-screen">
-        <h2>YOU WON</h2>
-        <p>...nice</p>
-        <div class="game__info--next-stage">
-          <a href="./stage-two.html">STAGE TWO!</a>
-        </div>
-      </div> 
-    </div>
-    <input type="checkbox" id="start-game">
-    <label for="start-game" id="start-game-button">Start Game</label>
-    <div class="game__info--game-over">
-      <h2>GAME OVER, YOU FAILED</h2>
-      <p>Press F5 to try again</p>
-    </div>
-    <div class="game__info--start-game"></div>
-  </body>
+  </div>
+  <input type="checkbox" id="start-game">
+  <input type="checkbox" id="game-rules">
+  <input type="checkbox" id="about-game">
+  <label for="start-game" id="start-game-button" class="menu-label">Start Game</label>
+  <label for="game-rules" id="game-rules-button" class="menu-label">How to play</label>
+  <label for="about-game" id="about-game-button" class="menu-label">About the game</label>
+  <label for="game-rules" id="game-rules-close" class="menu-label-close">Close</label>
+  <label for="about-game" id="about-game-close" class="menu-label-close">Close</label>
+  <div class="game__info--container">
+    <h1>POP ALL THE BALL'S BEFORE THE TIME RUNS OUT</h1>
+  </div>
+  <div class="game__info--game-over">
+    <h2>GAME OVER, YOU FAILED</h2>
+    <p>Press F5 to try again</p>
+  </div>
+  <div class="game__info--start-game"></div>
+  <div class="game__info--rules">
+    <h2>How to play</h2>
+    <p>Click on each the moving balls before the time runs out</p>
+    <p>Good Luck!</p>
+  </div>
+  <div class="game__info--about-game">
+    <h2>Moving ball game</h2>
+    <p>This is a moving ball game</p>
+  </div>
+</body>
+
 </html>

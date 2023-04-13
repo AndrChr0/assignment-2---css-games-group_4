@@ -9,12 +9,31 @@
   }
   
   .stage__two--body {
-    @include main-background(var(--stage-two-body-linear-gradient));
+    @include main-background(var(--stage-four-body-linear-gradient));
   }
   
-  .game__info--game-over-stage-two {
-      @include game-over-screen(23s);
+  .game__info--game-over-stage-four {
+      @include game-over-screen(27s);
   }
+
+  input.stage-four:nth-child(odd) {
+    animation-name: fall-odd;
+    animation-duration: 5s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+      animation-iteration-count: infinite;
+    }
+
+    input.stage-four:nth-child(even) {
+        animation-name: fall-even;
+        animation-duration: 5s;
+        animation-timing-function: ease-out;
+        animation-fill-mode: forwards;
+        animation-direction: reverse;
+          animation-iteration-count: infinite;
+        }
+
+    
   
   .ball-one.stage-four {
       animation-delay: 8s;
@@ -62,12 +81,4 @@
       }
   
   
-      input.stage-four {
-        animation-name: spiral-fall;
-        animation-duration: 5s;
-        animation-timing-function: ease-out;
-        animation-fill-mode: forwards;
-          animation-delay: 7s;
-          animation-iteration-count: infinite;
-        }
-        
+     

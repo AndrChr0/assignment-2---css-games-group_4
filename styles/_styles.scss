@@ -61,7 +61,7 @@ input:checked {
   background-color: var(--info-container-color);
   @include flex-centered;
   position: absolute;
-  top: -100dvh;
+  top: -110dvh;
   transition: 200ms;
   z-index: 5;
 }

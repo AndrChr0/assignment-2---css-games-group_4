@@ -3,6 +3,7 @@
   --paragraph-color: rgb(245, 245, 245);
   --stage-one-body-linear-gradient: linear-gradient(0deg, rgba(2, 0, 36, 1) 0%, rgba(0, 152, 194, 1) 100%);
   --stage-two-body-linear-gradient: linear-gradient(0deg, rgb(17, 17, 0) 0%, rgb(255, 166, 0) 100%);
+  --stage-four-body-linear-gradient: linear-gradient(0deg, rgb(0, 204, 17), rgb(8, 0, 20));
   --info-container-color: rgba(15, 12, 32);
   --next-stage-hover-color: rgba(255, 0, 0);
   --next-stage-color: rgba(255, 255, 255);
@@ -71,7 +72,7 @@ input:checked {
   align-items: center;
   flex-direction: column;
   position: absolute;
-  top: -100dvh;
+  top: -110dvh;
   transition: 200ms;
   z-index: 5;
 }
@@ -392,10 +393,10 @@ input.stage-two {
 }
 
 .stage__two--body {
-  background: var(--stage-two-body-linear-gradient) fixed;
+  background: var(--stage-four-body-linear-gradient) fixed;
 }
 
-.game__info--game-over-stage-two {
+.game__info--game-over-stage-four {
   height: 100vh;
   width: 100vw;
   background-color: var(--info-container-color);
@@ -405,9 +406,26 @@ input.stage-two {
   flex-direction: column;
   position: absolute;
   bottom: 0vh;
-  animation: game-over-animation 0.6s cubic-bezier(0.23, 1, 0.32, 1) 23s both;
+  animation: game-over-animation 0.6s cubic-bezier(0.23, 1, 0.32, 1) 27s both;
   top: 200vh;
   margin-top: 500px;
+}
+
+input.stage-four:nth-child(odd) {
+  animation-name: fall-odd;
+  animation-duration: 5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+}
+
+input.stage-four:nth-child(even) {
+  animation-name: fall-even;
+  animation-duration: 5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  animation-direction: reverse;
+  animation-iteration-count: infinite;
 }
 
 .ball-one.stage-four {
@@ -452,15 +470,6 @@ input.stage-two {
 
 .ball-eleven.stage-four {
   animation-delay: 13s;
-}
-
-input.stage-four {
-  animation-name: spiral-fall;
-  animation-duration: 5s;
-  animation-timing-function: ease-out;
-  animation-fill-mode: forwards;
-  animation-delay: 7s;
-  animation-iteration-count: infinite;
 }
 
 @keyframes info-box {
@@ -516,11 +525,37 @@ input.stage-four {
     transform: translateY(1000px) translateX(0px);
   }
 }
-@keyframes spiral-fall {
+@keyframes fall-odd {
   0% {
-    transform: translate(0, 0);
+    transform: translateY(0px) translateX(0px);
+  }
+  25% {
+    transform: translateY(250px) translateX(150px);
+  }
+  50% {
+    transform: translateY(450px) translateX(-100px);
+  }
+  75% {
+    transform: translateY(400px) translateX(200px);
   }
   100% {
-    transform: translate(100px, 1000px) rotate(1080deg);
+    transform: translateY(1000px) translateX(150px);
+  }
+}
+@keyframes fall-even {
+  0% {
+    transform: translateY(0px) translateX(-50px);
+  }
+  25% {
+    transform: translateY(300px) translateX(100px);
+  }
+  50% {
+    transform: translateY(550px) translateX(200px);
+  }
+  75% {
+    transform: translateY(450px) translateX(-200px);
+  }
+  100% {
+    transform: translateY(1000px) translateX(-10px);
   }
 }/*# sourceMappingURL=index.css.map */

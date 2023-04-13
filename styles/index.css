@@ -2,6 +2,7 @@
   --header-color: rgb(240, 248, 255);
   --paragraph-color: rgb(245, 245, 245);
   --stage-one-body-linear-gradient: linear-gradient(0deg, rgba(2, 0, 36, 1) 0%, rgba(0, 152, 194, 1) 100%);
+  --stage-two-body-linear-gradient: linear-gradient(0deg, rgb(17, 17, 0) 0%, rgb(255, 166, 0) 100%);
   --info-container-color: rgba(15, 12, 32);
   --next-stage-hover-color: rgba(255, 0, 0);
   --next-stage-color: rgba(255, 255, 255);
@@ -80,7 +81,7 @@ input:checked {
   flex-direction: column;
   position: absolute;
   bottom: 0vh;
-  animation: game-over-animation 0.6s cubic-bezier(0.23, 1, 0.32, 1) 19s both;
+  animation: game-over-animation 0.6s cubic-bezier(0.23, 1, 0.32, 1) 25s both;
   top: 200vh;
   margin-top: 500px;
 }
@@ -235,42 +236,6 @@ input:checked + input:checked + input:checked + input:checked + input:checked + 
   flex-direction: column;
 }
 
-@keyframes info-box {
-  0% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-  100% {
-    opacity: 0;
-    transform: translateX(5000px);
-  }
-}
-@keyframes fall {
-  0% {
-    transform: translateY(0px);
-  }
-  100% {
-    transform: translateY(1000px);
-  }
-}
-@keyframes game-over-animation {
-  0% {
-    transform: translateY(-1000px) scaleY(2.5) scaleX(0.2);
-    transform-origin: 50% 0%;
-    filter: blur(40px);
-    opacity: 0;
-    top: 200dvh;
-    margin-top: 500px;
-  }
-  100% {
-    transform: translateY(0) scaleY(1) scaleX(1);
-    transform-origin: 50% 50%;
-    filter: blur(0);
-    opacity: 1;
-    top: 0dvh;
-    margin-top: 0px;
-  }
-}
 .stage__one--body {
   background: var(--stage-one-body-linear-gradient) fixed;
 }
@@ -317,4 +282,140 @@ input:checked + input:checked + input:checked + input:checked + input:checked + 
 
 .ball-eleven {
   animation-delay: 13s;
+}
+
+.game__info--container-stage-two-four {
+  height: 100%;
+  width: 100dvw;
+  background-color: rgb(15, 12, 32);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  animation: info-box 1s linear 5s 1 normal both;
+  position: absolute;
+  top: 0;
+}
+
+.stage__two--body {
+  background: var(--stage-two-body-linear-gradient) fixed;
+}
+
+.game__info--game-over-stage-two {
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--info-container-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  bottom: 0vh;
+  animation: game-over-animation 0.6s cubic-bezier(0.23, 1, 0.32, 1) 23s both;
+  top: 200vh;
+  margin-top: 500px;
+}
+
+.ball-one.stage-two {
+  animation-delay: 8s;
+}
+
+.ball-two.stage-two {
+  animation-delay: 8.5s;
+}
+
+.ball-three.stage-two {
+  animation-delay: 9s;
+}
+
+.ball-four.stage-two {
+  animation-delay: 9.5s;
+}
+
+.ball-five.stage-two {
+  animation-delay: 10s;
+}
+
+.ball-six.stage-two {
+  animation-delay: 10.5s;
+}
+
+.ball-seven.stage-two {
+  animation-delay: 11s;
+}
+
+.ball-eight.stage-two {
+  animation-delay: 11.5s;
+}
+
+.ball-nine.stage-two {
+  animation-delay: 12s;
+}
+
+.ball-ten.stage-two {
+  animation-delay: 12.5s;
+}
+
+.ball-eleven.stage-two {
+  animation-delay: 13s;
+}
+
+input.stage-two {
+  animation: fall-side-to-side 5s linear;
+  animation-delay: 7s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes info-box {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(5000px);
+  }
+}
+@keyframes fall {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(1000px);
+  }
+}
+@keyframes game-over-animation {
+  0% {
+    transform: translateY(-1000px) scaleY(2.5) scaleX(0.2);
+    transform-origin: 50% 0%;
+    filter: blur(40px);
+    opacity: 0;
+    top: 200dvh;
+    margin-top: 500px;
+  }
+  100% {
+    transform: translateY(0) scaleY(1) scaleX(1);
+    transform-origin: 50% 50%;
+    filter: blur(0);
+    opacity: 1;
+    top: 0dvh;
+    margin-top: 0px;
+  }
+}
+@keyframes fall-side-to-side {
+  0% {
+    transform: translateY(0px) translateX(0px);
+  }
+  25% {
+    transform: translateY(250px) translateX(-50px);
+  }
+  50% {
+    transform: translateY(500px) translateX(30px);
+  }
+  75% {
+    transform: translateY(750px) translateX(-170px);
+  }
+  100% {
+    transform: translateY(1000px) translateX(0px);
+  }
 }/*# sourceMappingURL=index.css.map */

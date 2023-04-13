@@ -1,5 +1,6 @@
 .stage__one--body {
-    background: var(--stage-one-body-linear-gradient) fixed;
+    // background: var(--stage-one-body-linear-gradient) fixed;
+    @include main-background(var(--stage-one-body-linear-gradient));
   }
 
   

@@ -2,6 +2,7 @@
   --header-color: rgb(240, 248, 255);
   --paragraph-color: rgb(245, 245, 245);
   --stage-one-body-linear-gradient: linear-gradient(0deg, rgba(2, 0, 36, 1) 0%, rgba(0, 152, 194, 1) 100%);
+  --stage-two-body-linear-gradient: linear-gradient(0deg, rgb(17, 17, 0) 0%, rgb(214, 200, 0) 100%);
   --info-container-color: rgba(15, 12, 32);
   --next-stage-hover-color: rgba(255, 0, 0);
   --next-stage-color: rgba(255, 255, 255);
@@ -80,7 +81,7 @@ input:checked {
   flex-direction: column;
   position: absolute;
   bottom: 0vh;
-  animation: game-over-animation 0.6s cubic-bezier(0.23, 1, 0.32, 1) 19s both;
+  animation: game-over-animation 0.6s cubic-bezier(0.23, 1, 0.32, 1) 25s both;
   top: 200vh;
   margin-top: 500px;
 }
@@ -317,4 +318,32 @@ input:checked + input:checked + input:checked + input:checked + input:checked + 
 
 .ball-eleven {
   animation-delay: 13s;
+}
+
+.game__info--container-stage-two-four {
+  height: 100%;
+  width: 100dvw;
+  background-color: rgb(15, 12, 32);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  animation: info-box 1s linear 5s 1 normal both;
+  position: absolute;
+  top: 0;
+}
+
+.game__info--game-over-stage-two {
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--info-container-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  bottom: 0vh;
+  animation: game-over-animation 0.6s cubic-bezier(0.23, 1, 0.32, 1) 23s both;
+  top: 200vh;
+  margin-top: 500px;
 }/*# sourceMappingURL=index.css.map */

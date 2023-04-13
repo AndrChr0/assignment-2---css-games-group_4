@@ -3,6 +3,7 @@
   --paragraph-color: rgb(245, 245, 245);
   --stage-one-body-linear-gradient: linear-gradient(0deg, rgba(2, 0, 36, 1) 0%, rgba(0, 152, 194, 1) 100%);
   --stage-two-body-linear-gradient: linear-gradient(0deg, rgb(17, 17, 0) 0%, rgb(255, 166, 0) 100%);
+  --stage-three-body-linear-gradient:linear-gradient(0deg, rgb(0, 0, 0) 0%, rgb(88, 235, 2) 100%);
   --info-container-color: rgba(15, 12, 32);
   --next-stage-hover-color: rgba(255, 0, 0);
   --next-stage-color: rgba(255, 255, 255);
@@ -362,6 +363,88 @@ input:checked + input:checked + input:checked + input:checked + input:checked + 
 
 input.stage-two {
   animation: fall-side-to-side 5s linear;
+  animation-delay: 7s;
+  animation-iteration-count: infinite;
+}
+
+.game__info--container-stage-two-four {
+  height: 100%;
+  width: 100dvw;
+  background-color: rgb(15, 12, 32);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  animation: info-box 1s linear 5s 1 normal both;
+  position: absolute;
+  top: 0;
+}
+
+.stage__three--body {
+  background: var(--stage-three-body-linear-gradient) fixed;
+}
+
+.game__info--game-over-stage-three {
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--info-container-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  bottom: 0vh;
+  animation: game-over-animation 0.6s cubic-bezier(0.23, 1, 0.32, 1) 23s both;
+  top: 200vh;
+  margin-top: 500px;
+}
+
+.ball-one.stage-three {
+  animation-delay: 8s;
+}
+
+.ball-two.stage-three {
+  animation-delay: 8.5s;
+}
+
+.ball-three.stage-three {
+  animation-delay: 9s;
+}
+
+.ball-four.stage-three {
+  animation-delay: 9.5s;
+}
+
+.ball-five.stage-three {
+  animation-delay: 10s;
+}
+
+.ball-six.stage-three {
+  animation-delay: 10.5s;
+}
+
+.ball-seven.stage-three {
+  animation-delay: 11s;
+}
+
+.ball-eight.stage-three {
+  animation-delay: 11.5s;
+}
+
+.ball-nine.stage-three {
+  animation-delay: 12s;
+}
+
+.ball-ten.stage-three {
+  animation-delay: 12.5s;
+}
+
+.ball-eleven.stage-three {
+  animation-delay: 13s;
+}
+
+input.stage-three {
+  animation: fall-side-to-side 5s reverse;
   animation-delay: 7s;
   animation-iteration-count: infinite;
 }

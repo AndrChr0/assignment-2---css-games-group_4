@@ -1,4 +1,4 @@
-* {
+*, *::before, *::after {
   cursor: crosshair;
   margin: 0;
   font-family: sans-serif;
@@ -20,6 +20,7 @@ p {
 
 body {
   overflow: hidden;
+  height: 100dvh;
 }
 
 .stage__one--body {
@@ -217,7 +218,7 @@ input:checked {
 .game__info--win-screen {
   height: 115dvh;
   width: 100dvw;
-  background-color: rgb(15, 12, 32);
+  background-color: var(--info-container-color);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -246,7 +247,7 @@ input:checked
 .game__info--next-stage {
   height: 50px;
   width: 180px;
-  background-color: rgb(255, 255, 255);
+  background-color: var(--next-stage-color);
   font-size: 20px;
   border-radius: 20px;
   display: flex;

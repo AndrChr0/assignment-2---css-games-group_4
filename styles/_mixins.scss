@@ -6,6 +6,10 @@
     align-items: center;
     flex-direction: column;
   }
+
+@mixin main-background($gradient) {
+    background: $gradient fixed;
+  }
   
   @mixin game-over-screen($animation-delay) {
     height: 100vh;

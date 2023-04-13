@@ -1,0 +1,73 @@
+.game__info--container-stage-two-four {
+    height: 100%;
+    width: 100dvw;
+    background-color: var(--info-container-color);
+    @include flex-centered;
+    animation: info-box 1s linear 5s 1 normal both;
+    position: absolute;
+    top: 0;
+  }
+  
+  .stage__two--body {
+    @include main-background(var(--stage-two-body-linear-gradient));
+  }
+  
+  .game__info--game-over-stage-two {
+      @include game-over-screen(23s);
+  }
+  
+  .ball-one.stage-four {
+      animation-delay: 8s;
+    }
+  
+      .ball-two.stage-four {
+          animation-delay: 8.5s;
+      }
+  
+      .ball-three.stage-four {
+          animation-delay: 9s;
+      }
+  
+  
+      .ball-four.stage-four {
+          animation-delay: 9.5s;
+      }
+  
+      .ball-five.stage-four {
+          animation-delay: 10s;
+      }
+  
+      .ball-six.stage-four {
+          animation-delay: 10.5s;
+      }
+  
+      .ball-seven.stage-four {
+          animation-delay: 11s;
+      }
+  
+      .ball-eight.stage-four {
+          animation-delay: 11.5s;
+      }
+  
+      .ball-nine.stage-four {
+          animation-delay: 12s;
+      }
+  
+      .ball-ten.stage-four {
+          animation-delay: 12.5s;
+      }
+  
+      .ball-eleven.stage-four {
+          animation-delay: 13s;
+      }
+  
+  
+      input.stage-four {
+        animation-name: spiral-fall;
+        animation-duration: 5s;
+        animation-timing-function: ease-out;
+        animation-fill-mode: forwards;
+          animation-delay: 7s;
+          animation-iteration-count: infinite;
+        }
+        

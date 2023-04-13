@@ -61,3 +61,13 @@
     }
   }
   
+  @keyframes spiral-fall {
+    0% {
+        transform: translate(0, 0);
+      }
+      100% {
+        transform: translate(100px, 1000px) rotate(1080deg);
+      }
+  }
+  
+  

@@ -378,6 +378,91 @@ input.stage-two {
   animation-iteration-count: infinite;
 }
 
+.game__info--container-stage-two-four {
+  height: 100%;
+  width: 100dvw;
+  background-color: var(--info-container-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  animation: info-box 1s linear 5s 1 normal both;
+  position: absolute;
+  top: 0;
+}
+
+.stage__two--body {
+  background: var(--stage-two-body-linear-gradient) fixed;
+}
+
+.game__info--game-over-stage-two {
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--info-container-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  bottom: 0vh;
+  animation: game-over-animation 0.6s cubic-bezier(0.23, 1, 0.32, 1) 23s both;
+  top: 200vh;
+  margin-top: 500px;
+}
+
+.ball-one.stage-four {
+  animation-delay: 8s;
+}
+
+.ball-two.stage-four {
+  animation-delay: 8.5s;
+}
+
+.ball-three.stage-four {
+  animation-delay: 9s;
+}
+
+.ball-four.stage-four {
+  animation-delay: 9.5s;
+}
+
+.ball-five.stage-four {
+  animation-delay: 10s;
+}
+
+.ball-six.stage-four {
+  animation-delay: 10.5s;
+}
+
+.ball-seven.stage-four {
+  animation-delay: 11s;
+}
+
+.ball-eight.stage-four {
+  animation-delay: 11.5s;
+}
+
+.ball-nine.stage-four {
+  animation-delay: 12s;
+}
+
+.ball-ten.stage-four {
+  animation-delay: 12.5s;
+}
+
+.ball-eleven.stage-four {
+  animation-delay: 13s;
+}
+
+input.stage-four {
+  animation-name: spiral-fall;
+  animation-duration: 5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  animation-delay: 7s;
+  animation-iteration-count: infinite;
+}
+
 @keyframes info-box {
   0% {
     opacity: 1;
@@ -429,5 +514,13 @@ input.stage-two {
   }
   100% {
     transform: translateY(1000px) translateX(0px);
+  }
+}
+@keyframes spiral-fall {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(100px, 1000px) rotate(1080deg);
   }
 }/*# sourceMappingURL=index.css.map */

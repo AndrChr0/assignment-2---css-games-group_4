@@ -3,8 +3,8 @@
   --paragraph-color: rgb(245, 245, 245);
   --stage-one-body-linear-gradient: linear-gradient(0deg, rgba(2, 0, 36, 1) 0%, rgba(0, 152, 194, 1) 100%);
   --stage-two-body-linear-gradient: linear-gradient(0deg, rgb(17, 17, 0) 0%, rgb(255, 166, 0) 100%);
-  --stage-three-body-linear-gradient:linear-gradient(0deg, rgb(0, 0, 0) 0%, rgb(88, 235, 2) 100%);
   --stage-four-body-linear-gradient: linear-gradient(0deg, rgb(130, 0, 134), rgb(8, 0, 20));
+  --stage-three-body-linear-gradient:linear-gradient(0deg, rgb(0, 0, 0) 0%, rgb(88, 235, 2) 100%);
   --info-container-color: rgba(15, 12, 32);
   --next-stage-hover-color: rgba(255, 0, 0);
   --next-stage-color: rgba(255, 255, 255);
@@ -383,85 +383,6 @@ input.stage-two {
 .game__info--container-stage-two-four {
   height: 100%;
   width: 100dvw;
-  background-color: rgb(15, 12, 32);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  animation: info-box 1s linear 5s 1 normal both;
-  position: absolute;
-  top: 0;
-}
-
-.stage__three--body {
-  background: var(--stage-three-body-linear-gradient) fixed;
-  top: 0;
-}
-
-.game__info--game-over-stage-three {
-  height: 100vh;
-  width: 100vw;
-  background-color: var(--info-container-color);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  position: absolute;
-  bottom: 0vh;
-  animation: game-over-animation 0.6s cubic-bezier(0.23, 1, 0.32, 1) 23s both;
-  top: 200vh;
-  margin-top: 500px;
-}
-
-.ball-container .ball-one.stage-three {
-  animation-delay: 8s;
-}
-.ball-container .ball-two.stage-three {
-  animation-delay: 8.5s;
-}
-.ball-container .ball-three.stage-three {
-  animation-delay: 9s;
-}
-.ball-container .ball-four.stage-three {
-  animation-delay: 9.5s;
-}
-.ball-container .ball-five.stage-three {
-  animation-delay: 10s;
-}
-.ball-container .ball-six.stage-three {
-  animation-delay: 10.5s;
-}
-.ball-container .ball-seven.stage-three {
-  animation-delay: 11s;
-}
-.ball-container .ball-eight.stage-three {
-  animation-delay: 11.5s;
-}
-.ball-container .ball-nine.stage-three {
-  animation-delay: 12s;
-}
-.ball-container .ball-ten.stage-three {
-  animation-delay: 12.5s;
-}
-.ball-container .ball-eleven.stage-three {
-  animation-delay: 13s;
-}
-
-input.stage-three:nth-child(odd) {
-  animation: fall-side-to-side 5s reverse;
-  animation-delay: 7s;
-  animation-iteration-count: infinite;
-}
-
-input.stage-three:nth-child(even) {
-  animation: fall-side-to-side 5s linear;
-  animation-delay: 7s;
-  animation-iteration-count: infinite;
-}
-
-.game__info--container-stage-two-four {
-  height: 100%;
-  width: 100dvw;
   background-color: var(--info-container-color);
   display: flex;
   justify-content: center;
@@ -550,6 +471,85 @@ input.stage-four:nth-child(even) {
 
 .ball-eleven.stage-four {
   animation-delay: 13s;
+}
+
+.game__info--container-stage-two-four {
+  height: 100%;
+  width: 100dvw;
+  background-color: rgb(15, 12, 32);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  animation: info-box 1s linear 5s 1 normal both;
+  position: absolute;
+  top: 0;
+}
+
+.stage__three--body {
+  background: var(--stage-three-body-linear-gradient) fixed;
+  top: 0;
+}
+
+.game__info--game-over-stage-three {
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--info-container-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  bottom: 0vh;
+  animation: game-over-animation 0.6s cubic-bezier(0.23, 1, 0.32, 1) 23s both;
+  top: 200vh;
+  margin-top: 500px;
+}
+
+.ball-container .ball-one.stage-three {
+  animation-delay: 8s;
+}
+.ball-container .ball-two.stage-three {
+  animation-delay: 8.5s;
+}
+.ball-container .ball-three.stage-three {
+  animation-delay: 9s;
+}
+.ball-container .ball-four.stage-three {
+  animation-delay: 9.5s;
+}
+.ball-container .ball-five.stage-three {
+  animation-delay: 10s;
+}
+.ball-container .ball-six.stage-three {
+  animation-delay: 10.5s;
+}
+.ball-container .ball-seven.stage-three {
+  animation-delay: 11s;
+}
+.ball-container .ball-eight.stage-three {
+  animation-delay: 11.5s;
+}
+.ball-container .ball-nine.stage-three {
+  animation-delay: 12s;
+}
+.ball-container .ball-ten.stage-three {
+  animation-delay: 12.5s;
+}
+.ball-container .ball-eleven.stage-three {
+  animation-delay: 13s;
+}
+
+input.stage-three:nth-child(odd) {
+  animation: fall-side-to-side 5s reverse;
+  animation-delay: 7s;
+  animation-iteration-count: infinite;
+}
+
+input.stage-three:nth-child(even) {
+  animation: fall-side-to-side 5s linear;
+  animation-delay: 7s;
+  animation-iteration-count: infinite;
 }
 
 @keyframes info-box {

@@ -1,14 +1,4 @@
-// .game__info--container-stage-two-four {
-//     height: 100%;
-//     width: 100dvw;
-//     background-color: var(--info-container-color);
-//     @include flex-centered;
-//     animation: info-box 1s linear 5s 1 normal both;
-//     position: absolute;
-//     top: 0;
-//   }
-  
-  .stage__two--body {
+.stage__four--body {
     @include main-background(var(--stage-four-body-linear-gradient));
   }
   

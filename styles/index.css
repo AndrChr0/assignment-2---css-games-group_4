@@ -4,6 +4,7 @@
   --stage-one-body-linear-gradient: linear-gradient(0deg, rgba(2, 0, 36, 1) 0%, rgba(0, 152, 194, 1) 100%);
   --stage-two-body-linear-gradient: linear-gradient(0deg, rgb(17, 17, 0) 0%, rgb(255, 166, 0) 100%);
   --stage-three-body-linear-gradient:linear-gradient(0deg, rgb(0, 0, 0) 0%, rgb(88, 235, 2) 100%);
+  --stage-four-body-linear-gradient: linear-gradient(0deg, rgb(130, 0, 134), rgb(8, 0, 20));
   --info-container-color: rgba(15, 12, 32);
   --next-stage-hover-color: rgba(255, 0, 0);
   --next-stage-color: rgba(255, 255, 255);
@@ -72,7 +73,7 @@ input:checked {
   align-items: center;
   flex-direction: column;
   position: absolute;
-  top: -100dvh;
+  top: -110dvh;
   transition: 200ms;
   z-index: 5;
 }
@@ -101,6 +102,19 @@ input:checked + input:checked + input:checked + input:checked + input:checked + 
 
 .game__info--next-stage:hover {
   background-color: var(--next-stage-hover-color);
+}
+
+.game__info--container-stage-two-four {
+  height: 100%;
+  width: 100dvw;
+  background-color: var(--info-container-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  animation: info-box 1s linear 5s 1 normal both;
+  position: absolute;
+  top: 0;
 }
 
 .game__info--container {
@@ -297,19 +311,6 @@ input:checked + input:checked + input:checked + input:checked + input:checked + 
   animation-delay: 13s;
 }
 
-.game__info--container-stage-two-four {
-  height: 100%;
-  width: 100dvw;
-  background-color: var(--info-container-color);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  animation: info-box 1s linear 5s 1 normal both;
-  position: absolute;
-  top: 0;
-}
-
 .stage__two--body {
   background: var(--stage-two-body-linear-gradient) fixed;
 }
@@ -379,19 +380,6 @@ input.stage-two {
   animation-iteration-count: infinite;
 }
 
-.game__info--container-stage-two-four {
-  height: 100%;
-  width: 100dvw;
-  background-color: rgb(15, 12, 32);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  animation: info-box 1s linear 5s 1 normal both;
-  position: absolute;
-  top: 0;
-}
-
 .stage__three--body {
   background: var(--stage-three-body-linear-gradient) fixed;
   top: 0;
@@ -458,6 +446,86 @@ input.stage-three:nth-child(even) {
   animation-iteration-count: infinite;
 }
 
+.stage__two--body {
+  background: var(--stage-four-body-linear-gradient) fixed;
+}
+
+.game__info--game-over-stage-four {
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--info-container-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  bottom: 0vh;
+  animation: game-over-animation 0.6s cubic-bezier(0.23, 1, 0.32, 1) 27s both;
+  top: 200vh;
+  margin-top: 500px;
+}
+
+input.stage-four:nth-child(odd) {
+  animation-name: fall-odd;
+  animation-duration: 5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+}
+
+input.stage-four:nth-child(even) {
+  animation-name: fall-even;
+  animation-duration: 5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  animation-direction: reverse;
+  animation-iteration-count: infinite;
+}
+
+.ball-one.stage-four {
+  animation-delay: 8s;
+}
+
+.ball-two.stage-four {
+  animation-delay: 8.5s;
+}
+
+.ball-three.stage-four {
+  animation-delay: 9s;
+}
+
+.ball-four.stage-four {
+  animation-delay: 9.5s;
+}
+
+.ball-five.stage-four {
+  animation-delay: 10s;
+}
+
+.ball-six.stage-four {
+  animation-delay: 10.5s;
+}
+
+.ball-seven.stage-four {
+  animation-delay: 11s;
+}
+
+.ball-eight.stage-four {
+  animation-delay: 11.5s;
+}
+
+.ball-nine.stage-four {
+  animation-delay: 12s;
+}
+
+.ball-ten.stage-four {
+  animation-delay: 12.5s;
+}
+
+.ball-eleven.stage-four {
+  animation-delay: 13s;
+}
+
 @keyframes info-box {
   0% {
     opacity: 1;
@@ -509,5 +577,39 @@ input.stage-three:nth-child(even) {
   }
   100% {
     transform: translateY(1000px) translateX(0px);
+  }
+}
+@keyframes fall-odd {
+  0% {
+    transform: translateY(0px) translateX(0px);
+  }
+  25% {
+    transform: translateY(250px) translateX(150px);
+  }
+  50% {
+    transform: translateY(450px) translateX(-100px);
+  }
+  75% {
+    transform: translateY(400px) translateX(200px);
+  }
+  100% {
+    transform: translateY(1000px) translateX(150px);
+  }
+}
+@keyframes fall-even {
+  0% {
+    transform: translateY(0px) translateX(-50px);
+  }
+  25% {
+    transform: translateY(300px) translateX(100px);
+  }
+  50% {
+    transform: translateY(550px) translateX(200px);
+  }
+  75% {
+    transform: translateY(450px) translateX(-200px);
+  }
+  100% {
+    transform: translateY(1000px) translateX(-10px);
   }
 }/*# sourceMappingURL=index.css.map */

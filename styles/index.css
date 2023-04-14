@@ -9,7 +9,7 @@
   --stage-two-body-linear-gradient: linear-gradient(
     0deg,
     rgb(17, 17, 0) 0%,
-    rgb(255, 166, 0) 100%
+    rgb(229, 255, 0) 100%
   );
   --stage-three-body-linear-gradient: linear-gradient(
     0deg,
@@ -24,9 +24,12 @@
   --info-container-color: rgba(15, 12, 32);
   --next-stage-hover-color: rgba(255, 0, 0);
   --next-stage-color: rgba(255, 255, 255);
+  --next-stage-anchor-color: rgb(0, 0, 0);
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   cursor: crosshair;
   margin: 0;
   font-family: sans-serif;
@@ -39,7 +42,7 @@ h2 {
 }
 
 h2 {
-  font-size: xx-large;
+  font-size: 2rem;
 }
 
 p {
@@ -112,7 +115,7 @@ input:checked + input:checked + input:checked + input:checked + input:checked + 
 
 .game__info--next-stage a {
   text-decoration: none;
-  color: black;
+  color: var(--next-stage-anchor-color);
   font-weight: bold;
 }
 
@@ -194,20 +197,22 @@ input:checked + input:checked + input:checked + input:checked + input:checked + 
   border: var(--paragraph-color) 2px solid;
 }
 
-.menu-label-close:hover, .menu-label:hover {
-  border: 2px red solid;
+.menu-label-close:hover,
+.menu-label:hover {
+  border: 2px solid;
+  border-color: var(--next-stage-hover-color);
 }
 
 #start-game-button {
-  top: 20vh;
+  top: 20dvh;
 }
 
 #game-rules-button {
-  top: 35vh;
+  top: 35dvh;
 }
 
 #about-game-button {
-  top: 50vh;
+  top: 50dvh;
 }
 
 .game__info--start-game {
@@ -252,7 +257,8 @@ input:checked + input:checked + input:checked + input:checked + input:checked + 
   top: 0;
 }
 
-.game__info--about-game p, .game__info--rules p {
+.game__info--about-game p,
+.game__info--rules p {
   max-width: 50ch;
   margin-top: 1rem;
 }
@@ -281,6 +287,7 @@ input:checked + input:checked + input:checked + input:checked + input:checked + 
 .game__info--rules p:last-child {
   font-style: italic;
   font-size: 1rem;
+  width: 46ch;
 }
 
 .ball-one {
@@ -462,7 +469,7 @@ input.stage-three:nth-child(even) {
   animation-iteration-count: infinite;
 }
 
-.stage__two--body {
+.stage__four--body {
   background: var(--stage-four-body-linear-gradient) fixed;
 }
 

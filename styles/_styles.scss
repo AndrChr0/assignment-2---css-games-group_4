@@ -1,4 +1,6 @@
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   cursor: crosshair;
   margin: 0;
   font-family: sans-serif;
@@ -11,7 +13,7 @@ h2 {
 }
 
 h2 {
-  font-size: xx-large;
+  font-size: 2rem;
 }
 
 p {
@@ -24,8 +26,6 @@ body {
   height: 100dvh;
 }
 
-
-
 .ball-container {
   display: flex;
   justify-content: space-evenly;
@@ -33,9 +33,6 @@ body {
   position: relative;
   bottom: 100px;
 }
-
-
-
 
 input {
   appearance: none;
@@ -51,7 +48,7 @@ input:checked {
   opacity: 0;
 }
 
-.game__info--game-over{
+.game__info--game-over {
   display: none;
 }
 
@@ -94,7 +91,7 @@ input:checked
 }
 .game__info--next-stage a {
   text-decoration: none;
-  color: black;
+  color: var(--next-stage-anchor-color);
   font-weight: bold;
 }
 
@@ -115,5 +112,3 @@ input:checked
 .game__info--container {
   @include flex-centered;
 }
-
-

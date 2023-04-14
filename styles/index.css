@@ -26,7 +26,7 @@ h2 {
 }
 
 p {
-  font-size: x-large;
+  font-size: 1.3rem;
   color: var(--paragraph-color);
 }
 
@@ -41,15 +41,6 @@ body {
   flex-wrap: wrap;
   position: relative;
   bottom: 100px;
-}
-
-#start-game:checked ~ .game__info--container {
-  height: 100%;
-  width: 100dvw;
-  top: 0;
-  background-color: var(--info-container-color);
-  animation: info-box 1s linear 5s 1 normal both;
-  position: absolute;
 }
 
 input {
@@ -70,6 +61,66 @@ input:checked {
 
 .game__info--game-over {
   display: none;
+}
+
+.game__info--win-screen {
+  height: 115dvh;
+  width: 100dvw;
+  background-color: var(--info-container-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  top: -100dvh;
+  transition: 200ms;
+  z-index: 5;
+}
+
+input:checked + input:checked + input:checked + input:checked + input:checked + input:checked + input:checked + input:checked + input:checked + input:checked + input:checked ~ .game__info--win-screen {
+  top: 9.7dvh;
+}
+
+.game__info--next-stage {
+  height: 50px;
+  width: 180px;
+  background-color: var(--next-stage-color);
+  font-size: 1rem;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.game__info--next-stage a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.game__info--next-stage:hover {
+  background-color: var(--next-stage-hover-color);
+}
+
+.game__info--container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.stage__one--body {
+  background: var(--stage-one-body-linear-gradient) fixed;
+}
+
+#start-game:checked ~ .game__info--container {
+  height: 100%;
+  width: 100dvw;
+  top: 0;
+  background-color: var(--info-container-color);
+  animation: info-box 1s linear 5s 1 normal both;
+  position: absolute;
 }
 
 #start-game:checked ~ .game__info--game-over {
@@ -114,7 +165,6 @@ input:checked {
 }
 
 .menu-label-close:hover, .menu-label:hover {
-  color: red;
   border: 2px red solid;
 }
 
@@ -143,6 +193,16 @@ input:checked {
   display: none;
 }
 
+#start-game-button:before {
+  content: "Ball shooting game";
+  position: absolute;
+  bottom: 130%;
+  font-size: 2rem;
+  width: 199%;
+  font-weight: bolder;
+  text-align: center;
+}
+
 .game__info--rules,
 .game__info--about-game {
   display: none;
@@ -168,6 +228,9 @@ input:checked {
 }
 
 .menu-label-close {
+  border: solid white 2px;
+  width: 30px;
+  height: 30px;
   display: none;
 }
 
@@ -185,60 +248,9 @@ input:checked {
   color: var(--paragraph-color);
 }
 
-.game__info--win-screen {
-  height: 115dvh;
-  width: 100dvw;
-  background-color: var(--info-container-color);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  position: absolute;
-  top: -100dvh;
-  transition: 200ms;
-  z-index: 5;
-}
-
-input:checked + input:checked + input:checked + input:checked + input:checked + input:checked + input:checked + input:checked + input:checked + input:checked + input:checked ~ .game__info--win-screen {
-  top: 9.7dvh;
-}
-
-.game__info--next-stage {
-  height: 50px;
-  width: 180px;
-  background-color: var(--next-stage-color);
-  font-size: 20px;
-  border-radius: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 1rem;
-}
-
-.game__info--next-stage a {
-  text-decoration: none;
-  color: black;
-  font-weight: bold;
-}
-
-.game__info--next-stage:hover {
-  background-color: var(--next-stage-hover-color);
-}
-
-.menu-label-close {
-  border: solid white 2px;
-  width: 30px;
-}
-
-.game__info--container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-.stage__one--body {
-  background: var(--stage-one-body-linear-gradient) fixed;
+.game__info--rules p:last-child {
+  font-style: italic;
+  font-size: 1rem;
 }
 
 .ball-one {
@@ -288,7 +300,7 @@ input:checked + input:checked + input:checked + input:checked + input:checked + 
 .game__info--container-stage-two-four {
   height: 100%;
   width: 100dvw;
-  background-color: rgb(15, 12, 32);
+  background-color: var(--info-container-color);
   display: flex;
   justify-content: center;
   align-items: center;

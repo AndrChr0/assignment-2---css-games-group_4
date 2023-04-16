@@ -26,7 +26,7 @@ If users where to need help, they can reach out to the contributors via the GitH
 
 ## Which technology is used
 
-the project is developed using pure CSS/SASS and HTML and is hosted on GitHub.
+The project is developed using pure CSS/SASS and HTML and is hosted on GitHub.
 
 ## Who are the creators/maintainers 
 
